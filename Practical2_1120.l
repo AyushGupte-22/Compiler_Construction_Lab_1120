@@ -28,7 +28,7 @@ int is_keyword(char *word) {
  
 %%
  
-"/*"([^*]|\*+[^*/])*\*+"/"    { comment_count++; cc += yyleng; }
+"/*"([^*]|\*+[^*/])*\*+"/"   { comment_count++; cc += yyleng; }
  "//".*                                  { comment_count++; cc += yyleng; }
  [\n]                                    { lc++; cc += yyleng; }
  " "                                     { sc++; cc += yyleng; }
